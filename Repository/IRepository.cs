@@ -9,15 +9,15 @@ namespace Repository
 {
     interface IRepository
     {
-        int Inserir(ContasPagar contasPagar);
+        int Inserir(ContaPagar contasPagar);
 
         bool Apagar(int id);
 
-        bool Atualizar(ContasPagar contasPagar);
+        bool Atualizar(ContaPagar contasPagar);
 
-        ContasPagar ObterPeloId(int id);
+        ContaPagar ObterPeloId(int id);
 
-        List<ContasPagar> ObterTodos(string busca);
+        List<ContaPagar> ObterTodos(string busca);
 
 
     }
