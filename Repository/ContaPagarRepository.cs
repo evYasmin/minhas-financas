@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class ContasPagarRepository : IRepository
+    public class ContaPagarRepository : IRepository
     {
 
         private Conexao conexao;
 
-        public ContasPagarRepository()
+        public ContaPagarRepository()
         {
             conexao = new Conexao();
         }
