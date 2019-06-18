@@ -15,8 +15,8 @@
         <h1>Lista Contas a Pagar</h1>
         <h3>@ViewBag.Texto</h3>
     </div>
-    <a href="/ContasAPagar/cadastro">Nova conta</a>
-    <form action="/fruta/index" method="get">
+    <a href="/contaPagar/cadastro">Nova conta</a>
+    <form action="/contaPagar/Index" method="get">
         <label for="=campo-pesquisa">Pesquisa</label>
         <input type="text" id="campo-pesquisa" name="pesquisa" />
     </form>
@@ -40,8 +40,8 @@
                         <td>@ViewBag.ContasPagar[i].Valor</td>
                         <td>@ViewBag.ContasPagar[i].Status</td>
                         <td>
-                            <a href="/contaPagar/Apagar/id=@ViewBag.ContasPagar[i].id">Apagar</a>
-                            <a href="/contaPagar/Editar/id=@ViewBag.ContasPagar[i].id">Editar</a>
+                            <a href="/contapagar/Apagar?id=@ViewBag.ContasPagar[i].Id">Apagar</a>
+                            <a href="/contapagar/Editar?id=@ViewBag.ContasPagar[i].Id">Editar</a>
                         </td>
                     </tr>
                 }

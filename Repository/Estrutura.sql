@@ -8,3 +8,5 @@ descricao VARCHAR(100) ,
 status VARCHAR(100) 
 );
 
+
+SELECT * FROM contasPagar;

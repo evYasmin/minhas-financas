@@ -31,7 +31,7 @@ namespace View.Controllers
             ContaPagar contaPagar = new ContaPagar();
             contaPagar.Nome = nome;
             contaPagar.Valor = valor;
-            contaPagar.tipo = tipo;
+            contaPagar.Tipo = tipo;
             contaPagar.Descricao = descricao;
             contaPagar.Status = status;
 
@@ -51,7 +51,7 @@ namespace View.Controllers
         {
             ContaPagarRepository repository = new ContaPagarRepository();
             ContaPagar contaPagar = repository.ObterPeloId(id);
-            ViewBag.contaPagar = contaPagar;
+            ViewBag.ContaPagar = contaPagar;
             return View();
         }
 
@@ -61,7 +61,7 @@ namespace View.Controllers
             contaPagar.Id = id;
             contaPagar.Nome = nome;
             contaPagar.Valor = valor;
-            contaPagar.tipo = tipo;
+            contaPagar.Tipo = tipo;
             contaPagar.Descricao = descricao;
             contaPagar.Status = status;
             ContaPagarRepository repository = new ContaPagarRepository();
