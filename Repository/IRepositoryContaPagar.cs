@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    interface IRepository
+    interface IRepositoryContaPagar
     {
         int Inserir(ContaPagar contasPagar);
 
