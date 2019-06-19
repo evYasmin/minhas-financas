@@ -9,11 +9,11 @@ using Model;
 
 namespace Repository
 {
-    public class ContasReceberRepository : IRepositoryContaReceber
+    public class ContaReceberRepository : IRepositoryContaReceber
     {
         private Conexao conexao;
 
-        public ContasReceberRepository()
+        public ContaReceberRepository()
         {
             conexao = new Conexao();
         }

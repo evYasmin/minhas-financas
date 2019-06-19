@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Lista Contas a Receber</h1>
+        <h3>@ViewBag.Texto</h3>
+    </div>
+    <a href="/contaReceber/cadastro">Nova conta</a>
+    <form action="/contaReceber/Index" method="get">
+        <label for="=campo-pesquisa">Pesquisa</label>
+        <input type="text" id="campo-pesquisa" name="pesquisa" />
+    </form>
+    <div>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < ViewBag.ContasReceber.Count; i++)
+                {
+                    <tr>
+                        <td>@ViewBag.ContasReceber[i].Id</td>
+                        <td>@ViewBag.ContasReceber[i].Nome</td>
+                        <td>@ViewBag.ContasReceber[i].Valor</td>
+                        <td>@ViewBag.ContasReceber[i].Status</td>
+                        <td>
+                            <a href="/contareceber/Apagar?id=@ViewBag.ContasReceber[i].Id">Apagar</a>
+                            <a href="/contareceber/Editar?id=@ViewBag.ContasReceber[i].Id">Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+</body>
+</html>
