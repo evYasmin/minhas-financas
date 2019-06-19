@@ -8,11 +8,11 @@ namespace Model
 {
     public class ClientePF
     {
-        public int id;
-        public string nome;
-        public string cpf;
-        public string dataNascimento;
-        public string rg;
-        public string sexo;
+        public int Id;
+        public string Nome;
+        public string Cpf;
+        public string DataNascimento;
+        public string Rg;
+        public string Sexo;
     }
 }
