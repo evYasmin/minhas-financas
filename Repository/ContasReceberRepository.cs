@@ -105,8 +105,17 @@ VALUES (@NOME, @VALOR , @TIPO , @DESCRICAO , @STATUS)";
             List<ContasReceber> contasReceber = new List<ContasReceber>();
             for (int i = 0; i < tabela.Rows.Count; i++)
             {
-
+                DataRow linha = tabela.Rows[i];
+                ContasReceber ContaReceber = new ContasReceber();
+                ContaReceber.Id = Convert.ToInt32(linha["id"]);
+                ContaReceber.Nome = linha["nome"].ToString();
+                ContaReceber.Valor = Convert.ToDecimal(linha["valor"]);
+                ContaReceber.Tipo = linha["tipo"].ToString();
+                ContaReceber.Descricao = linha["descricao"].ToString();
+                ContaReceber.Status = linha["status"].ToString();
+                contasReceber.Add(ContaReceber);
             }
+            return contasReceber;
         }
     }
 }
